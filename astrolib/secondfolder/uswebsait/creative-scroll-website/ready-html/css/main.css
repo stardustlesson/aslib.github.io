@@ -25,9 +25,9 @@ h1, h2, h3, h4, h5, h6 {
 	will-change: transform;
 }
 body {
-	background-image: url(../img/bg.jpg);
+	background-image: url(../img/Bg.jpg);
 	background-size: 5 px;
-	color: #fafafa;
+	color: black;
 	font-family: raleway-c;
 	overflow-x: hidden;
 }
