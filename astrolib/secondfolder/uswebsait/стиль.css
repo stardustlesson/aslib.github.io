@@ -1,0 +1,264 @@
+body {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+h1 {
+    font-size: 50pt;
+    babackground-color: #243148;
+    text-align: center;
+}
+
+p {
+    cursive: факт: Солнце обладает такой большой массой, что все остальные планеты системы составляют лишь 0,0014% от его веса.;
+}
+
+.page {
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50	;
+	animation: animatedBg 5s linear infinite;
+	
+}
+.header:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(5, 248, 155, 0.3);
+	z-index: 3;
+}
+
+.container {
+	max-width: 1180px;
+	margin: 0px auto;
+	padding:0px 10px;
+}
+.header__body {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	align-items: center;
+}
+.header__list li {
+	list-style: none;
+	margin: 0px 0px 0px 20px;
+}
+.header__list {
+	display: flex;
+	position: relative;
+	z-index: 3	;
+}
+.header__link {
+	color:#fff;
+	text-transform: uppercase;
+	font-size: 18px;
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	padding: 25px 30px;
+	overflow: hidden;
+}
+.header__link:hover {
+	background-color: #fff;
+	color: black;
+	box-shadow: 0 0 5px #fff,
+	0 0 25px #fff, 
+	0 0 50px #fff,
+	0 0 200px #fff;
+	-webkit-box-reflect: below 1px linear-gardient(transparent, #0005);
+}
+.header__link:first-child {
+	filter: hue-rotate(224deg);
+}
+.header__link:last-child {
+	filter: hue-rotate(90deg);
+}
+.header__link span {
+	position: absolute;
+	display: block;
+}
+.header__link span:nth-child(1) {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(90deg, transparent, #fff);
+	animation: animateon1 1s infinite;
+}
+@keyframes animateon1 {
+0% {
+	lef: -100%;
+}
+100% {
+	left: 100%;
+}
+}
+
+.header__link span:nth-child(2) {
+	top: -100%;
+	right: 0;
+	width: 1px;
+	height: 100%;
+	background: linear-gradient(180deg, transparent, #fff);
+	animation: animateon2 1s infinite;
+	animation-delay: .25s;
+}
+@keyframes animateon2 {
+	0% {
+		top: -100%;
+	}
+	100% {
+		top: 100%;
+	}
+	}
+	.header__link span:nth-child(3) {
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background: linear-gradient(270deg, transparent, #fff);
+		animation: animateon3 1s infinite;
+		animation-delay: .5s;
+	}
+	@keyframes animateon3 {
+		0% {
+			right: -100%;
+		}
+		100% {
+			right: 100%;
+		}
+		}
+
+		.header__link span:nth-child(4) {
+			bottom: -100%;
+			left: 0;
+			width: 1px;
+			height: 100%;
+			background: linear-gradient(360deg, transparent, #fff);
+			animation: animateon4 1s infinite;
+			animation-delay: .75s;
+		}
+		@keyframes animateon4 {
+			0% {
+				bottom: -100%;
+			}
+			100% {
+				bottom: 100%;
+			}
+			}
+
+	.header__logo {
+		font-size: 40px;
+		z-index: 3;
+		width: 100%; 
+	height: 100%; 
+	position: fixed; 
+	left: 0px; 
+	top: 0px; 
+	text-align: center;
+	margin-top: 15px;
+	}
+	
+	@media (max-width:767px)
+	{
+		#background {
+			width: 0%; 
+			height: 0%; 
+			position: fixed; 
+			left: 0px; 
+			top: 0px; 
+			z-index: -1;
+		}
+		.header__body {
+			height: 50px;
+			
+		}
+		.header__logo {
+			flex: 0 0 40px;
+		}
+		.header__burger {
+			position: relative;
+			width: 30px;
+			height: 20px;
+			z-index: 3;
+		}
+		.header__burger:before,
+		.header__burger:after{
+			content: '';
+			background-color: #fff;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			left: 0;
+			transition: all 0.3s ease 0s;	
+		}
+		.header__burger:before{
+			top: 0;
+		}
+		.header__burger:after{
+			bottom: 0;
+		}
+		.header__burger span{
+			position: absolute;
+			background-color: #fff;
+			left: 0;
+			width: 100%;
+			height: 2px;
+			top: 9px;
+			transition: all 0.3s ease 0s;
+		}
+		.header__menu {
+			display: flex;
+			position: fixed;
+			top: -120%;
+			left: 0;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(99, 21, 130,.8);
+			padding: 70px 10px 20px 10px;
+			transition: all 0.8s ease 0s;
+		}
+		.header__menu.active {
+			top: 0;
+			transition: all 0.8s ease 0s;	
+		}
+		.header__list {
+			display: block;
+		}
+		.header__list li {
+			margin: 0px 0px 20px 0px;
+		}
+		.header__burger.active:before {
+			transform:rotate(45deg);
+		 top: 9px;
+	 }
+	 .header__burger.active:after {
+		 transform:rotate(-45deg);
+		 bottom: 9px;
+	}
+	.header__burger.active span {
+		transform: scale(0);
+	}
+	.content {
+		padding: 70px 0px 0px 0px;
+	}
+	body.lock {
+		overflow: hidden;
+	}
+	.header__link {
+		color: #fff;
+	}
+}
