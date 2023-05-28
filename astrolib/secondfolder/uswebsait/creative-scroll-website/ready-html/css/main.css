@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
 	background-image: url(../img/Bg.jpg);
 	background-size: 5 px;
-	color: black;
+	color: white;
 	font-family: raleway-c;
 	overflow-x: hidden;
 }
